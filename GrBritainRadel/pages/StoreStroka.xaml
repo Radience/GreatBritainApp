@@ -1,0 +1,34 @@
+﻿<Page x:Class="GrBritainRadel.pages.StoreStroka"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GrBritainRadel.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="StoreStroka">
+
+    <Grid Background="White">
+        <ListBox Width="800" Height="450" x:Name="lstboxStore" HorizontalAlignment="Center" VerticalAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <Image Width="60" Height="80" Source="{Binding sss}"/>
+                        <StackPanel Margin="5" >
+                            <TextBlock Margin="2" FontSize="20" Text="{Binding sss}" TextWrapping="Wrap" Width="Auto" HorizontalAlignment="Left"/>
+                            <StackPanel Orientation="Horizontal" Margin="5">
+                                <TextBlock Text="Стоимость:" FontSize="14"/>
+                                <TextBlock FontSize="14" Text="{Binding sss, StringFormat={}{0} рублей}" Margin="5,0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Количество цветов:" FontSize="14"/>
+                                <TextBlock FontSize="14" Text="{Binding sss, StringFormat={}{0} штук}" Margin="5,0"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+        </ListBox>
+    </Grid>
+</Page>
