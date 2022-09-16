@@ -30,7 +30,11 @@ namespace GrBritainRadel.pages
         {
             string lgin = Login.Text;
             string pswrd = Password.Text;
-            if (LoadData.Authhorization(lgin, pswrd) == true)
+            if (LoadData.Authhorization(lgin, pswrd) == true && Roles.getRole() == "adm")
+            {
+                NavigationService.Navigate(new Store());
+            }
+            else if (LoadData.Authhorization(lgin, pswrd) == true && Roles.getRole() == "user")
             {
                 NavigationService.Navigate(new Store());
             }

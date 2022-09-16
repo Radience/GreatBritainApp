@@ -17,18 +17,18 @@
         <TextBlock Text="АВТОРИЗАЦИЯ" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#04A0FF" FontSize="30"/>
         <Image Source="C:\Users\Radiance\source\repos\GrBritainRadel\resources\school_logo.png" Width="85" Height="85" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
         <StackPanel Orientation="Vertical" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBox x:Name="Login" Width="130" Height="30" Background="{x:Null}" BorderBrush="Black"/>
-            <TextBox x:Name="Password" Width="130" Height="30" Margin="0,5" Background="{x:Null}" BorderBrush="Black"/>
+            <TextBox x:Name="Login" Width="130" Height="30" Background="{x:Null}" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="Password" Width="130" Height="30" Margin="0,5" Background="{x:Null}" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20">
-            <Button x:Name="voiti" Content="ВОЙТИ" HorizontalAlignment="Center" VerticalAlignment="Center" Width="130" Height="30" Click="voiti_Click" Background="#FFE7FABF" Foreground="#04A0FF">
+            <Button x:Name="voiti" Content="ВОЙТИ" HorizontalAlignment="Center" VerticalAlignment="Center" Width="130" Height="30" Click="voiti_Click" Background="#FFE7FABF" Foreground="#04A0FF" IsDefault="True">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="vixod" Content="ВЫЙТИ" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0" Width="130" Height="30" Background="#FFE7FABF" Foreground="#04A0FF" Click="vixod_Click">
+            <Button x:Name="vixod" Content="ВЫЙТИ" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0" Width="130" Height="30" Background="#FFE7FABF" Foreground="#04A0FF" Click="vixod_Click" IsCancel="True">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>

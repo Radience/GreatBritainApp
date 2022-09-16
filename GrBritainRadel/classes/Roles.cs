@@ -8,8 +8,17 @@ namespace GrBritainRadel.classes
 {
     class Roles
     {
-        const string admin = "adm";
-        const string user = "user";
+        static string role;
 
+        public static string getRole()
+        {
+            return role;
+        }
+
+        public static void setRole(string rol)
+        {
+            role = rol;
+        }
+        
     }
 }

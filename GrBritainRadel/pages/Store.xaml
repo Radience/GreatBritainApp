@@ -28,7 +28,7 @@
                 <Image Source="C:\Users\Radiance\source\repos\GrBritainRadel\resources\datagrid.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Button>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Grid.Row="1">
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Background="#FFE7FABF" Width="680" HorizontalAlignment="Left" VerticalAlignment="Bottom">
             <TextBlock Text="Сортировать по:" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <ComboBox Width="130" Height="30" Background="White" Foreground="#FFE7FABF">
                 <ComboBox.Resources>
