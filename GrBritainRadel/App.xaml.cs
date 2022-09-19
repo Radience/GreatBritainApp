@@ -13,5 +13,6 @@ namespace GrBritainRadel
     /// </summary>
     public partial class App : Application
     {
+
     }
 }

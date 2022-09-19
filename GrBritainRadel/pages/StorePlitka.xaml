@@ -19,19 +19,20 @@
                 <DataTemplate>
                     <Border BorderBrush="Gray" BorderThickness="1" Width="200" Height="185" Margin="10,10" CornerRadius="10">
                         <Grid>
-                            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center">
                                 <StackPanel Orientation="Vertical">
-                                    <Image Source="{Binding sss}"/>
-                                    <TextBlock Text="{Binding sss}"/>
+                                    <Image Source="{Binding photo_product}"/>
+                                    <TextBlock Text="{Binding name_product}"/>
+                                    <TextBlock Text="{Binding price_product}"/>
                                 </StackPanel>
+                                <Button x:Name="ShowTovar" Content="View" Width="130" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                                    <Button.Resources>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="10"/>
+                                        </Style>
+                                    </Button.Resources>
+                                </Button>
                             </StackPanel>
-                            <Button x:Name="ShowTovar" Content="View" Width="199" Height="184" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-                                <Button.Resources>
-                                    <Style TargetType="Border">
-                                        <Setter Property="CornerRadius" Value="10"/>
-                                    </Style>
-                                </Button.Resources>
-                            </Button>
                         </Grid>
                     </Border>
                 </DataTemplate>

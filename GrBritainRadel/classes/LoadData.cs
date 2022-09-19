@@ -5,12 +5,27 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GrBritainRadel.pages;
+using System.IO;
 
 namespace GrBritainRadel.classes
 {
     class LoadData
     {
         static SqlConnection con = new SqlConnection(@"Data Source=RADIANCE-ПК\SQLEXPRESS;Initial Catalog=GrBritainRadel;Integrated Security=True");
+        public static DataView dv;
+
+        public static void loadPictures()
+        {
+            string currentPath = Directory.GetCurrentDirectory();
+            string activePath = "";
+            for(int i = 0; i < currentPath.Length - 9; i++)
+            {
+                activePath += currentPath[i];
+            }
+            activePath += @"resources\image\";
+
+        }
 
         public static bool Authhorization(string lg, string paswrd)
         {
@@ -35,6 +50,36 @@ namespace GrBritainRadel.classes
                 return true;
             }
             return false;
+        }
+
+        public static DataView stroka()
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand($"SELECT photo_product, name_product, price_product, count_product FROM Product", con);
+            adapter.SelectCommand = cmd;
+            adapter.Fill(dt);
+            return dv = dt.DefaultView;
+        }
+
+        public static DataView plitka()
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand($"SELECT photo_product, name_product, price_product FROM Product", con);
+            adapter.SelectCommand = cmd;
+            adapter.Fill(dt);
+            return dv = dt.DefaultView;
+        }
+
+        public static DataView dtGrid()
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand($"SELECT photo_product, name_product, price_product, weight_product, width_product, height_product, length_product, count_product FROM Product", con);
+            adapter.SelectCommand = cmd;
+            adapter.Fill(dt);
+            return dv = dt.DefaultView;
         }
     }
 }

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using GrBritainRadel.pages;
+using GrBritainRadel.classes;
 
 namespace GrBritainRadel
 {
@@ -22,9 +23,10 @@ namespace GrBritainRadel
     public partial class MainWindow : Window
     {
         public MainWindow()
-        {
+        {   
             InitializeComponent();
             MainFrame.Navigate(new authoriz());
+            LoadData.loadPictures();
         }
     }
 }

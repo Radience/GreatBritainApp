@@ -9,17 +9,16 @@
       Title="StoreDataGrid">
 
     <Grid Background="White">
-        <DataGrid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="800" AutoGenerateColumns="False" Height="450" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible">
+        <DataGrid x:Name="dtGrid" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="800" AutoGenerateColumns="False" Height="450" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Фото" Width="150" Binding="{Binding sss}"/>
-                <DataGridTextColumn Header="Номер" Width="auto" Binding="{Binding sss}"/>
-                <DataGridTextColumn Header="Имя" Width="auto" Binding="{Binding sss}"/>
-                <DataGridTextColumn Header="Команда" Width="auto" Binding="{Binding sss}"/>
-                <DataGridTextColumn Header="Позиция" Width="auto" Binding="{Binding sss}"/>
-                <DataGridTextColumn Header="Вес" Width="auto" Binding="{Binding sss}"/>
-                <DataGridTextColumn Header="Рост" Width="auto" Binding="{Binding sss}"/>
-                <DataGridTextColumn Header="Опыт" Width="auto" Binding="{Binding sss}"/>
-                <DataGridTextColumn Header="Страна" Width="auto" Binding="{Binding sss}"/>
+                <DataGridTextColumn Header="Фото" Width="150" Binding="{Binding photo_product}"/>
+                <DataGridTextColumn Header="Название" Width="auto" Binding="{Binding name_product}"/>
+                <DataGridTextColumn Header="Цена" Width="auto" Binding="{Binding price_product}"/>
+                <DataGridTextColumn Header="Количество" Width="auto" Binding="{Binding count_product}"/>
+                <DataGridTextColumn Header="Вес" Width="auto" Binding="{Binding weight_product}"/>
+                <DataGridTextColumn Header="Ширина" Width="auto" Binding="{Binding width_product}"/>
+                <DataGridTextColumn Header="Высота" Width="auto" Binding="{Binding height_product}"/>
+                <DataGridTextColumn Header="Длина" Width="auto" Binding="{Binding length_product}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

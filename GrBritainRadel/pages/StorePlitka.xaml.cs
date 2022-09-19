@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using GrBritainRadel.classes;
 
 namespace GrBritainRadel.pages
 {
@@ -23,6 +24,7 @@ namespace GrBritainRadel.pages
         public StorePlitka()
         {
             InitializeComponent();
+            plitka.ItemsSource = LoadData.plitka();
         }
     }
 }

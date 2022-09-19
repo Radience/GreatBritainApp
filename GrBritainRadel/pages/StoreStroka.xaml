@@ -13,16 +13,20 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal" Margin="5">
-                        <Image Width="60" Height="80" Source="{Binding sss}"/>
+                        <Image Width="60" Height="80" Source="{Binding photo_product}"/>
                         <StackPanel Margin="5" >
-                            <TextBlock Margin="2" FontSize="20" Text="{Binding sss}" TextWrapping="Wrap" Width="Auto" HorizontalAlignment="Left"/>
+                            <TextBlock Margin="2" FontSize="20" Text="" TextWrapping="Wrap" Width="Auto" HorizontalAlignment="Left"/>
+                            <StackPanel Orientation="Horizontal" Margin="5">
+                                <TextBlock Text="Название:" FontSize="14"/>
+                                <TextBlock FontSize="14" Text="{Binding name_product}" Margin="5,0"/>
+                            </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="5">
                                 <TextBlock Text="Стоимость:" FontSize="14"/>
-                                <TextBlock FontSize="14" Text="{Binding sss, StringFormat={}{0} рублей}" Margin="5,0"/>
+                                <TextBlock FontSize="14" Text="{Binding price_product}" Margin="5,0"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Количество цветов:" FontSize="14"/>
-                                <TextBlock FontSize="14" Text="{Binding sss, StringFormat={}{0} штук}" Margin="5,0"/>
+                                <TextBlock Text="Количество:" FontSize="14"/>
+                                <TextBlock FontSize="14" Text="{Binding count_product}" Margin="5,0"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>

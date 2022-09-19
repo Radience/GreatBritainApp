@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using GrBritainRadel.classes;
 
 namespace GrBritainRadel.pages
 {
@@ -23,6 +25,7 @@ namespace GrBritainRadel.pages
         public StoreStroka()
         {
             InitializeComponent();
+            lstboxStore.ItemsSource = LoadData.stroka();
         }
     }
 }
