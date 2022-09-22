@@ -25,8 +25,8 @@ namespace GrBritainRadel
         public MainWindow()
         {   
             InitializeComponent();
-            MainFrame.Navigate(new authoriz());
             LoadData.loadPictures();
+            MainFrame.Navigate(new authoriz());
         }
     }
 }

@@ -24,5 +24,10 @@ namespace GrBritainRadel.pages
         {
             InitializeComponent();
         }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new StorePlitka());
+        }
     }
 }

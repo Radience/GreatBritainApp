@@ -24,7 +24,14 @@ namespace GrBritainRadel.pages
         public StoreDataGrid()
         {
             InitializeComponent();
-            dtGrid.ItemsSource = LoadData.dtGrid();
+            if (LoadData.textSearch != "")
+            {
+                dtGrid.ItemsSource = LoadData.Search();
+            }
+            else if (LoadData.v == 1 || LoadData.v == 0)
+            {
+                dtGrid.ItemsSource = LoadData.Sort();
+            }
         }
     }
 }

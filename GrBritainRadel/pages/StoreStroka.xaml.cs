@@ -25,7 +25,14 @@ namespace GrBritainRadel.pages
         public StoreStroka()
         {
             InitializeComponent();
-            lstboxStore.ItemsSource = LoadData.stroka();
+            if (LoadData.textSearch != "")
+            {
+                lstboxStore.ItemsSource = LoadData.Search();
+            }
+            else if (LoadData.v == 1 || LoadData.v == 0)
+            {
+                lstboxStore.ItemsSource = LoadData.Sort();
+            }
         }
     }
 }

@@ -9,9 +9,15 @@
       Title="StoreDataGrid">
 
     <Grid Background="White">
-        <DataGrid x:Name="dtGrid" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="800" AutoGenerateColumns="False" Height="450" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible">
+        <DataGrid x:Name="dtGrid" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="1000" AutoGenerateColumns="False" Height="450" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Visible">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Фото" Width="150" Binding="{Binding photo_product}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Width="150" Source ="{Binding photo_product}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
                 <DataGridTextColumn Header="Название" Width="auto" Binding="{Binding name_product}"/>
                 <DataGridTextColumn Header="Цена" Width="auto" Binding="{Binding price_product}"/>
                 <DataGridTextColumn Header="Количество" Width="auto" Binding="{Binding count_product}"/>

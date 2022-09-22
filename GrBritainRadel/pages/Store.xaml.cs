@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using GrBritainRadel.classes;
 
 namespace GrBritainRadel.pages
 {
@@ -29,16 +30,54 @@ namespace GrBritainRadel.pages
         private void stroka_Click(object sender, RoutedEventArgs e)
         {
             FrameStore.Navigate(new StoreStroka());
+            LoadData.posi = "stroka";
         }
 
         private void plitka_Click(object sender, RoutedEventArgs e)
         {
             FrameStore.Navigate(new StorePlitka());
+            LoadData.posi = "plitka";
         }
 
         private void datagrid_Click(object sender, RoutedEventArgs e)
         {
             FrameStore.Navigate(new StoreDataGrid());
+            LoadData.posi = "datagrid";
+        }
+
+        private void Search_Click(object sender, RoutedEventArgs e)
+        {
+            LoadData.textSearch = searchbox.Text;
+            if (LoadData.posi == "stroka")
+            {
+                FrameStore.Navigate(new StoreStroka());
+            }
+            else if (LoadData.posi == "plitka")
+            {
+                FrameStore.Navigate(new StorePlitka());
+            }
+            else if (LoadData.posi == "datagrid")
+            {
+                FrameStore.Navigate(new StoreDataGrid());
+            }
+        }
+
+        private void sortby_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            LoadData.v = sortby.SelectedIndex;
+            LoadData.textSearch = "";
+            if(LoadData.posi == "stroka")
+            {
+                FrameStore.Navigate(new StoreStroka());
+            }
+            else if (LoadData.posi == "plitka")
+            {
+                FrameStore.Navigate(new StorePlitka());
+            }
+            else if (LoadData.posi == "datagrid")
+            {
+                FrameStore.Navigate(new StoreDataGrid());
+            }
         }
     }
 }

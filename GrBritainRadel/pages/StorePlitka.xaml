@@ -21,11 +21,11 @@
                         <Grid>
                             <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center">
                                 <StackPanel Orientation="Vertical">
-                                    <Image Source="{Binding photo_product}"/>
-                                    <TextBlock Text="{Binding name_product}"/>
-                                    <TextBlock Text="{Binding price_product}"/>
+                                    <Image Source="{Binding photo_product}" Width="100" Height="100"/>
+                                    <TextBlock Text="{Binding name_product}" FontSize="15" HorizontalAlignment="Center" FontFamily="Rubik"/>
+                                    <TextBlock Text="{Binding price_product}" FontSize="15" HorizontalAlignment="Center" FontFamily="Rubik"/>
                                 </StackPanel>
-                                <Button x:Name="ShowTovar" Content="View" Width="130" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                                <Button x:Name="ShowTovar" Content="View" Width="130" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="ShowTovar_Click">
                                     <Button.Resources>
                                         <Style TargetType="Border">
                                             <Setter Property="CornerRadius" Value="10"/>

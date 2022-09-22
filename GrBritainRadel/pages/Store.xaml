@@ -30,22 +30,28 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="1" Background="#FFE7FABF" Width="680" HorizontalAlignment="Left" VerticalAlignment="Bottom">
             <TextBlock Text="Сортировать по:" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <ComboBox Width="130" Height="30" Background="White" Foreground="#FFE7FABF">
+            <ComboBox x:Name="sortby" Width="130" Height="30" Foreground="Black" SelectionChanged="sortby_SelectionChanged">
                 <ComboBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </ComboBox.Resources>
+                <ComboBoxItem>
+                    <TextBlock Text="ОТ А ДО Я"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock Text="ОТ Я ДО А"/>
+                </ComboBoxItem>
             </ComboBox>
             <TextBlock Text="Поиск:" Width="65" Height="30" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBox x:Name="searchbox" Width="200" Height="30">
+            <TextBox x:Name="searchbox" Width="200" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </TextBox.Resources>
             </TextBox>
-            <Button x:Name="Search" Width="130" Height="30" Content="Найти" FontSize="15" Foreground="#FF04A0FF" Background="#FFE7FABF">
+            <Button x:Name="Search" Width="130" Height="30" Content="Найти" FontSize="15" Foreground="#FF04A0FF" Background="#FFE7FABF" Click="Search_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10"/>

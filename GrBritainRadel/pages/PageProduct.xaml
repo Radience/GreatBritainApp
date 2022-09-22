@@ -9,6 +9,45 @@
       Title="PageProduct">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0">
+            <Border x:Name="border" BorderBrush="Black" BorderThickness="1" Height="250" Width="250" Margin="10">
+                <Image x:Name="photoT" Height="auto" Width="auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
+            </Border>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Vertical" Grid.Column="1" Margin="10">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Название:" FontSize="20"/>
+                <TextBlock Text="{Binding name_product}" FontSize="20"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Цена:" FontSize="20"/>
+                <TextBlock Text="{Binding price_product}" FontSize="20"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Количество:" FontSize="20"/>
+                <TextBlock Text="{Binding count_product}" FontSize="20"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Вес:" FontSize="20"/>
+                <TextBlock Text="{Binding weight_product}" FontSize="20"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Ширина:" FontSize="20"/>
+                <TextBlock Text="{Binding width_product}" FontSize="20"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Длина:" FontSize="20"/>
+                <TextBlock Text="{Binding length_product}" FontSize="20"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Высота:" FontSize="20"/>
+                <TextBlock Text="{Binding height_product}" FontSize="20"/>
+            </StackPanel>
+        </StackPanel>
+        <Button x:Name="back" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Width="130" Height="30" Content="BACK" Foreground="Black" FontFamily="Rubik" FontSize="15" Click="back_Click"/>
     </Grid>
 </Page>
